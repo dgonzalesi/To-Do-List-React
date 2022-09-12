@@ -1,0 +1,18 @@
+{
+    "emmet.includeLanguages": {
+       "javascript": "javascriptreact"
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "css"
+    ]
+ }
