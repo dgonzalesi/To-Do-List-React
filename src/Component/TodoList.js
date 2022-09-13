@@ -31,14 +31,23 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const updateTodo = (todoId, newValue) => {
+    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+      return;
+    }
+
+    setTodos((prev) => prev.map((item) => (item.id === todoId ? newValue : item)));
+  };
+
   return (
     <div>
-      <h1>Whats the Plan for Today?</h1>
+      <h1>TODO:</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
+        updateTodo={updateTodo}
       />
     </div>
   );
