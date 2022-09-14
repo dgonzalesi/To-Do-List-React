@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 export default function TodoForm(props) {
   const [input, setInput] = useState('');
   const { onSubmit } = props;
-  console.log(input);
-  //   onSubmit.propTypes = { onSubmit: PropTypes.func };
+  TodoForm.propTypes = { onSubmit: PropTypes.func.isRequired };
 
   const handleSubmit = (e) => {
     e.preventDefault();

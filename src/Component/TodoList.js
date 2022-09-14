@@ -15,7 +15,7 @@ function TodoList() {
 
     setTodos(newTodos);
   };
-
+  const todoCount = todos.length;
   const removeTodo = (id) => {
     const removeArr = [...todos].filter((todo) => todo.id !== id);
     setTodos(removeArr);
@@ -40,7 +40,7 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className="maincontainer">
       <h1>TODO:</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
@@ -48,6 +48,7 @@ function TodoList() {
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
+        counter={todoCount}
       />
     </div>
   );

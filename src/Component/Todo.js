@@ -11,13 +11,14 @@ function Todo(props) {
     value: '',
   });
   const {
-    todos, completeTodo, removeTodo, updateTodo,
+    todos, completeTodo, removeTodo, updateTodo, counter,
   } = props;
   Todo.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
     completeTodo: PropTypes.func.isRequired,
     removeTodo: PropTypes.func.isRequired,
     updateTodo: PropTypes.func.isRequired,
+    counter: PropTypes.number.isRequired,
   };
 
   const submitUpdate = (value) => {
@@ -39,7 +40,14 @@ function Todo(props) {
 
   return (todos.map((todo) => (
     <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={Math.floor(Math.random() * 10000)}>
-      <div className="todo-element" key={todo.id} onClick={() => completeTodo(todo.id)} onKeyDown={handleKeyPress}>
+      <div
+        className="todo-element"
+        key={todo.id}
+        onClick={() => completeTodo(todo.id)}
+        onKeyDown={handleKeyPress}
+        role="button"
+        tabIndex={counter}
+      >
         {todo.text}
       </div>
       <div className="icons">
