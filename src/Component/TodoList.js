@@ -41,7 +41,7 @@ function TodoList() {
 
   return (
     <div className="maincontainer">
-      <h1>TODO:</h1>
+      <h1>TODO</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
