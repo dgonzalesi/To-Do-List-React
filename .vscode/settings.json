@@ -14,5 +14,6 @@
         "vue",
         "markdown",
         "css"
-    ]
+    ],
+    "liveServer.settings.port": 5501
  }
