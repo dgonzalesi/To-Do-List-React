@@ -70,8 +70,9 @@ The project is a simple calculator that performs basic arithmetic operations. It
 
 ## Live Demo (if available)
 
-[Coming Soon!](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
+[AWS Live!](https://dev.d21g5vqr8mpp0v.amplifyapp.com/)
+id: admin
+pw: daniel2022
 
 ## Getting Started
 
